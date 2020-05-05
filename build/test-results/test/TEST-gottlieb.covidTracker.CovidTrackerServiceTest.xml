@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="gottlieb.covidTracker.CovidTrackerServiceTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-05-04T20:33:02" hostname="Mindys-MBP.fios-router.home" time="1804.171">
+  <properties/>
+  <testcase name="getCurrentStats" classname="gottlieb.covidTracker.CovidTrackerServiceTest" time="1804.171">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
