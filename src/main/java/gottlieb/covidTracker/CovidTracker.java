@@ -26,9 +26,9 @@ public class CovidTracker {
     }
 
     @SerializedName("Countries")
-    List<countries> countries;
+    List<Countries> countries;
 
-    class countries
+    class Countries
     {
         @SerializedName("Country")
         String country;
