@@ -93,7 +93,7 @@ public class CovidTrackerController {
     private int findCountry(List<CovidTracker.Countries> countries, int start, int size, String country) {
             int mid = (start + size) / 2;
 
-            if (country.equalsIgnoreCase(countries.get(mid).country)) {
+            if (country.equalsIgnoreCase(countries.get(mid).country) || country.equalsIgnoreCase(countries.get(mid).country_key)) {
                 return mid;
             } else if ((country.compareToIgnoreCase(countries.get(mid).country)) <= -1) {
                 return findCountry(countries, 0, mid, country);
