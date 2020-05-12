@@ -12,14 +12,14 @@ public class CovidTrackerFrame extends JFrame {
     JButton getCountry;
     JButton getGlobal;
 
-    public static JLabel title;
-    public static JLabel newConfirmed;
-    public static JLabel totalConfirmed;
-    public static JLabel newDeaths;
-    public static JLabel totalDeaths;
-    public static JLabel newRecovered;
-    public static JLabel totalRecovered;
-    public static JLabel errorMessage;
+    JLabel title;
+    JLabel newConfirmed;
+    JLabel totalConfirmed;
+    JLabel newDeaths;
+    JLabel totalDeaths;
+    JLabel newRecovered;
+    JLabel totalRecovered;
+    JLabel errorMessage;
 
     public CovidTrackerFrame() {
         setSize(600, 300);
@@ -57,14 +57,29 @@ public class CovidTrackerFrame extends JFrame {
         getCountry = new JButton("Country Data");
         chooseOutput.add(getCountry);
         getCountry.addActionListener(actionEvent -> {
-            covidTrackerController.requestCountryData(country.getText());
+            covidTrackerController.requestCountryData(country.getText(),
+                                                        title,
+                                                        newConfirmed,
+                                                        totalConfirmed,
+                                                        newDeaths,
+                                                        totalDeaths,
+                                                        newRecovered,
+                                                        totalRecovered,
+                                                        errorMessage);
             country.setText("");
         });
 
         getGlobal = new JButton("Global Data");
         chooseOutput.add(getGlobal);
         getGlobal.addActionListener(actionEvent -> {
-            covidTrackerController.requestGlobalData();
+            covidTrackerController.requestGlobalData(title,
+                                                        newConfirmed,
+                                                        totalConfirmed,
+                                                        newDeaths,
+                                                        totalDeaths,
+                                                        newRecovered,
+                                                        totalRecovered,
+                                                        errorMessage);
             country.setText("");
         });
     }
